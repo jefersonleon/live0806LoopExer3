@@ -24,6 +24,35 @@ public class Live0806LoopExer3 {
         while(opcao != 0 ){
             opcao = Integer.parseInt(JOptionPane.showInputDialog("Digite:\n"
              + "(1) débito\n(2) crédito\n(0) fim"));
+            switch(opcao){
+                case 1:
+                    valor = Double.parseDouble(
+                          JOptionPane.showInputDialog("Informe o valor do "
+                            + "Débito R$:"));
+                    acDebito = acDebito + valor;
+                    break;
+                case 2:
+                    valor = Double.parseDouble(
+                    JOptionPane.showInputDialog("Informe o valor do Crédito"
+                            + " R$:"));
+                    acCredito = acCredito + valor;
+                    break;
+                default:
+                    if(opcao<0 || opcao>2){
+                      JOptionPane.showMessageDialog(null, "Opção inválida apenas "
+                        + "1 ou 2 ou 0");
+                    }else{
+                        JOptionPane.showMessageDialog(null, 
+                        "        Resultado\n Créditos R$"+acCredito+"\n Débitos R$"
+                        +acDebito+"\n---------------------------\n Saldo R$ "
+                        +(acCredito-acDebito));
+                        JOptionPane.showMessageDialog(null, "Bye bye");
+                    }//fim do if
+            }   //fim switch   
+            }//fim do loop
+    }//fim do metodo main
+}//fim do classe
+            /*
             if(opcao == 1){
                 valor = Double.parseDouble(JOptionPane.showInputDialog("Informe"
                         + " o valor do Débito R$:"));
@@ -46,4 +75,4 @@ public class Live0806LoopExer3 {
         
     }
 
-}
+}*/
